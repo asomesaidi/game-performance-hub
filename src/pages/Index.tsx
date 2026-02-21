@@ -1,6 +1,9 @@
 import { useMemo, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Cpu, Monitor, MemoryStick, HardDrive, Gamepad2, TrendingUp, Heart, Sparkles } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Cpu, Monitor, MemoryStick, HardDrive, Gamepad2, TrendingUp, Heart, Sparkles, BarChart3 } from 'lucide-react';
+import logoImg from '@/assets/logo.png';
 import { GameCard } from '@/components/GameCard';
 import { GameCardSkeleton } from '@/components/GameCardSkeleton';
 import { SearchBar } from '@/components/SearchBar';
@@ -61,28 +64,40 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>GameSpec AI – Can My PC Run It?</title>
+        <meta name="description" content="Check if your PC can run any game. Compare system specs against 700+ game requirements instantly." />
+      </Helmet>
+
       {/* Header */}
       <header className="sticky top-0 z-30 border-b border-border/30 bg-background/80 backdrop-blur-xl">
         <div className="container py-4">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-lg bg-primary/20 flex items-center justify-center">
-                <Gamepad2 className="w-5 h-5 text-primary" />
-              </div>
+              <img src={logoImg} alt="GameSpec AI" className="w-9 h-9 rounded-lg" />
               <div>
                 <h1 className="text-lg font-bold text-foreground">GameSpec AI</h1>
                 <p className="text-xs text-muted-foreground">Can My PC Run It?</p>
               </div>
             </div>
-            {specs && (
-              <div className="hidden md:flex items-center gap-3 text-xs text-muted-foreground">
-                <span className="flex items-center gap-1"><Cpu className="w-3 h-3" /> {(specs as UserSpecs).cpu}</span>
-                <span className="text-border">•</span>
-                <span className="flex items-center gap-1"><Monitor className="w-3 h-3" /> {(specs as UserSpecs).gpu}</span>
-                <span className="text-border">•</span>
-                <span className="flex items-center gap-1"><MemoryStick className="w-3 h-3" /> {(specs as UserSpecs).ram}GB</span>
-              </div>
-            )}
+            <div className="flex items-center gap-3">
+              <Link
+                to="/compare"
+                className="flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-all"
+              >
+                <BarChart3 className="w-4 h-4" />
+                <span className="hidden sm:inline">Compare GPUs</span>
+              </Link>
+              {specs && (
+                <div className="hidden md:flex items-center gap-3 text-xs text-muted-foreground">
+                  <span className="flex items-center gap-1"><Cpu className="w-3 h-3" /> {(specs as UserSpecs).cpu}</span>
+                  <span className="text-border">•</span>
+                  <span className="flex items-center gap-1"><Monitor className="w-3 h-3" /> {(specs as UserSpecs).gpu}</span>
+                  <span className="text-border">•</span>
+                  <span className="flex items-center gap-1"><MemoryStick className="w-3 h-3" /> {(specs as UserSpecs).ram}GB</span>
+                </div>
+              )}
+            </div>
           </div>
           <SearchBar
             search={search}
