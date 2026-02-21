@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { Cpu, Monitor, MemoryStick, HardDrive, Gamepad2, TrendingUp, Heart, Sparkles, BarChart3 } from 'lucide-react';
+import { Cpu, Monitor, MemoryStick, Gamepad2, TrendingUp, Heart, Sparkles, BarChart3 } from 'lucide-react';
 import logoImg from '@/assets/logo.png';
 import { GameCard } from '@/components/GameCard';
 import { GameCardSkeleton } from '@/components/GameCardSkeleton';
@@ -81,6 +81,13 @@ const Index = () => {
               </div>
             </div>
             <div className="flex items-center gap-3">
+              <Link
+                to="/favorites"
+                className="flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-all"
+              >
+                <Heart className="w-4 h-4" />
+                <span className="hidden sm:inline">Favorites</span>
+              </Link>
               <Link
                 to="/compare"
                 className="flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-all"

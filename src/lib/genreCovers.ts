@@ -14,6 +14,7 @@ import mobaCover from '@/assets/covers/moba.jpg';
 import survivalCover from '@/assets/covers/survival.jpg';
 import mmoCover from '@/assets/covers/mmo.jpg';
 import actionCover from '@/assets/covers/action.jpg';
+import { getSteamImageUrl } from '@/lib/steamAppIds';
 
 const genreCoverMap: Record<string, string> = {
   'Open World': openWorldCover,
@@ -35,6 +36,15 @@ const genreCoverMap: Record<string, string> = {
   'Action RPG': actionCover,
 };
 
+export function getGameCover(gameName: string, genre: string): string {
+  // Try real Steam image first
+  const steamUrl = getSteamImageUrl(gameName);
+  if (steamUrl) return steamUrl;
+  // Fallback to genre cover
+  return genreCoverMap[genre] || actionCover;
+}
+
+// Keep backward compat
 export function getGenreCover(genre: string): string {
   return genreCoverMap[genre] || actionCover;
 }

@@ -7,7 +7,8 @@ import { useGames, useUserSpecs, useFavorites } from '@/hooks/useGames';
 import { getGameById } from '@/data/gameParser';
 import { evaluatePerformance, getPerformanceBgClass } from '@/data/performanceLogic';
 import { PerformanceChart } from '@/components/PerformanceChart';
-import { getGenreCover } from '@/lib/genreCovers';
+import { getGameCover, getGenreCover } from '@/lib/genreCovers';
+import { getSteamHeaderUrl } from '@/lib/steamAppIds';
 import type { UserSpecs, Game } from '@/types/game';
 
 function RelatedGames({ currentGame, games }: { currentGame: Game; games: Game[] }) {
@@ -24,7 +25,7 @@ function RelatedGames({ currentGame, games }: { currentGame: Game; games: Game[]
         {related.map((g) => (
           <Link key={g.id} to={`/game/${g.id}`} className="glass-card overflow-hidden group hover:scale-[1.02] transition-transform">
             <div className="relative aspect-video overflow-hidden">
-              <img src={getGenreCover(g.genre)} alt={g.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy" />
+              <img src={getGameCover(g.name, g.genre)} alt={g.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy" />
               <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent" />
             </div>
             <div className="p-2">
@@ -68,7 +69,7 @@ export default function GameDetailPage() {
     );
   }
 
-  const cover = getGenreCover(game.genre);
+  const cover = getSteamHeaderUrl(game.name) || getGameCover(game.name, game.genre);
   const pageTitle = `${game.name} – System Requirements | GameSpec AI`;
   const pageDescription = `Can your PC run ${game.name}? Check minimum and recommended requirements. ${game.genre} game requiring ${game.storageGB}GB storage, ${game.minRAM} RAM minimum.`;
 
