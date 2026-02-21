@@ -7,6 +7,7 @@ import { HelmetProvider } from "react-helmet-async";
 import Index from "./pages/Index";
 import GameDetailPage from "./pages/GameDetailPage";
 import GPUComparePage from "./pages/GPUComparePage";
+import FavoritesPage from "./pages/FavoritesPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/game/:id" element={<GameDetailPage />} />
             <Route path="/compare" element={<GPUComparePage />} />
+            <Route path="/favorites" element={<FavoritesPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

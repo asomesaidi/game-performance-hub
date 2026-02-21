@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Heart, HardDrive } from 'lucide-react';
 import { motion } from 'framer-motion';
 import type { Game, PerformanceResult } from '@/types/game';
-import { getGenreCover } from '@/lib/genreCovers';
+import { getGameCover, getGenreCover } from '@/lib/genreCovers';
 
 interface GameCardProps {
   game: Game;
@@ -21,7 +21,9 @@ const performanceColorMap: Record<string, string> = {
 };
 
 export const GameCard = memo(({ game, index, isFavorite, onToggleFavorite, performanceResult }: GameCardProps) => {
-  const cover = getGenreCover(game.genre);
+  const cover = getGameCover(game.name, game.genre);
+  const fallback = getGenreCover(game.genre);
+  const [imgSrc, setImgSrc] = useState(cover);
 
   return (
     <motion.div
@@ -35,9 +37,10 @@ export const GameCard = memo(({ game, index, isFavorite, onToggleFavorite, perfo
           {/* Image */}
           <div className="relative aspect-[3/4] overflow-hidden">
             <img
-              src={cover}
+              src={imgSrc}
               alt={game.name}
               loading="lazy"
+              onError={() => setImgSrc(fallback)}
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             />
 
