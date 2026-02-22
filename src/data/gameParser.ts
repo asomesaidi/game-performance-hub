@@ -63,13 +63,22 @@ function guessGenre(name: string): string {
 }
 
 function parseRAM(val: string): number {
-  const match = val.match(/(\d+)/);
-  return match ? parseInt(match[1]) : 0;
+  const match = val.match(/(\d+)\s*(MB|GB)?/i);
+  if (!match) return 0;
+  const num = parseInt(match[1]);
+  const unit = (match[2] || 'GB').toUpperCase();
+  if (unit === 'MB') return Math.round(num / 1024 * 100) / 100;
+  return num;
 }
 
 function parseStorage(val: string): number {
-  const match = val.match(/(\d+)/);
-  return match ? parseInt(match[1]) : 0;
+  const match = val.match(/(\d+)\s*(MB|GB|TB)?/i);
+  if (!match) return 0;
+  const num = parseInt(match[1]);
+  const unit = (match[2] || 'GB').toUpperCase();
+  if (unit === 'MB') return Math.round(num / 1024 * 100) / 100; // Convert MB to GB (e.g. 200MB = 0.2GB)
+  if (unit === 'TB') return num * 1024;
+  return num;
 }
 
 function slugify(name: string): string {
