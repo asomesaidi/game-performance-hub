@@ -9,6 +9,7 @@ import GameDetailPage from "./pages/GameDetailPage";
 import GPUComparePage from "./pages/GPUComparePage";
 import FavoritesPage from "./pages/FavoritesPage";
 import NotFound from "./pages/NotFound";
+import { AIChatBot } from "./components/AIChatBot";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +27,7 @@ const App = () => (
             <Route path="/favorites" element={<FavoritesPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
+          <AIChatBot />
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>

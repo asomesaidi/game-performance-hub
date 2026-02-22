@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useMemo, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
@@ -8,6 +8,8 @@ import { GameCard } from '@/components/GameCard';
 import { GameCardSkeleton } from '@/components/GameCardSkeleton';
 import { SearchBar } from '@/components/SearchBar';
 import { FilterPanel } from '@/components/FilterPanel';
+import { HeroBanner } from '@/components/HeroBanner';
+import { PCCollectionsUI, usePCCollections } from '@/components/PCCollections';
 import { useGames, useFilteredGames, useInfiniteScroll, useFavorites, useUserSpecs } from '@/hooks/useGames';
 import { getUniqueGenres } from '@/data/gameParser';
 import { evaluatePerformance } from '@/data/performanceLogic';
@@ -20,6 +22,8 @@ const Index = () => {
   const [optionalFilters, setOptionalFilters] = useState<OptionalFilters>({});
   const { specs, save: saveSpecs, clear: clearSpecs } = useUserSpecs();
   const { favorites, toggle: toggleFav, isFavorite } = useFavorites();
+  const { profiles, addProfile, removeProfile } = usePCCollections();
+  const contentRef = useRef<HTMLDivElement>(null);
 
   const genres = useMemo(() => getUniqueGenres(games), [games]);
 
@@ -70,16 +74,21 @@ const Index = () => {
       </Helmet>
 
       {/* Header */}
+      {/* Hero Banner */}
+      {!search && (
+        <HeroBanner onScrollDown={() => contentRef.current?.scrollIntoView({ behavior: 'smooth' })} />
+      )}
+
       <header className="sticky top-0 z-30 border-b border-border/30 bg-background/80 backdrop-blur-xl">
         <div className="container py-4">
           <div className="flex items-center justify-between mb-4">
-            <div className="flex items-center gap-3">
+            <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
               <img src={logoImg} alt="GameSpec AI" className="w-9 h-9 rounded-lg" />
               <div>
                 <h1 className="text-lg font-bold text-foreground">GameSpec AI</h1>
                 <p className="text-xs text-muted-foreground">Can My PC Run It?</p>
               </div>
-            </div>
+            </Link>
             <div className="flex items-center gap-3">
               <Link
                 to="/favorites"
@@ -115,7 +124,17 @@ const Index = () => {
         </div>
       </header>
 
-      <main className="container py-8 space-y-12">
+      <main ref={contentRef} className="container py-8 space-y-12">
+        {/* PC Collections */}
+        {(profiles.length > 0 || specs) && (
+          <PCCollectionsUI
+            profiles={profiles}
+            onSelect={saveSpecs}
+            onRemove={removeProfile}
+            currentSpecs={specs as UserSpecs | null}
+            onSaveNew={(name) => specs && addProfile(name, specs as UserSpecs)}
+          />
+        )}
         {/* Top for Your PC section */}
         {specs && topForPC.length > 0 && !search && (
           <section>

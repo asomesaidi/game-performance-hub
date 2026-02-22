@@ -1,6 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import { useMemo, useState } from 'react';
-import { ArrowLeft, Cpu, Monitor, MemoryStick, HardDrive, Heart, Gamepad2, Share2, ExternalLink } from 'lucide-react';
+import { ArrowLeft, Cpu, Monitor, MemoryStick, HardDrive, Heart, Gamepad2, Share2, ExternalLink, ShoppingCart } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { useGames, useUserSpecs, useFavorites } from '@/hooks/useGames';
@@ -8,7 +8,7 @@ import { getGameById } from '@/data/gameParser';
 import { evaluatePerformance, getPerformanceBgClass } from '@/data/performanceLogic';
 import { PerformanceChart } from '@/components/PerformanceChart';
 import { getGameCover, getGenreCover } from '@/lib/genreCovers';
-import { getSteamHeaderUrl } from '@/lib/steamAppIds';
+import { getSteamHeaderUrl, getSteamStoreUrl } from '@/lib/steamAppIds';
 import type { UserSpecs, Game } from '@/types/game';
 
 function RelatedGames({ currentGame, games }: { currentGame: Game; games: Game[] }) {
@@ -70,6 +70,7 @@ export default function GameDetailPage() {
   }
 
   const cover = getSteamHeaderUrl(game.name) || getGameCover(game.name, game.genre);
+  const steamUrl = getSteamStoreUrl(game.name);
   const pageTitle = `${game.name} – System Requirements | GameSpec AI`;
   const pageDescription = `Can your PC run ${game.name}? Check minimum and recommended requirements. ${game.genre} game requiring ${game.storageGB}GB storage, ${game.minRAM} RAM minimum.`;
 
@@ -149,9 +150,14 @@ export default function GameDetailPage() {
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-8">
           {/* Quick stats */}
           <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
-            <span className="flex items-center gap-1.5 glass-card px-4 py-2"><HardDrive className="w-4 h-4 text-primary" /> {game.storageGB} GB</span>
+            <span className="flex items-center gap-1.5 glass-card px-4 py-2"><HardDrive className="w-4 h-4 text-primary" /> {game.storageGB < 1 ? `${Math.round(game.storageGB * 1024)} MB` : `${game.storageGB} GB`}</span>
             <span className="flex items-center gap-1.5 glass-card px-4 py-2"><MemoryStick className="w-4 h-4 text-primary" /> Min {game.minRAM}</span>
             <span className="flex items-center gap-1.5 glass-card px-4 py-2"><Monitor className="w-4 h-4 text-primary" /> {game.minOS}</span>
+            {steamUrl && (
+              <a href={steamUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 glass-card px-4 py-2 hover:border-primary/50 transition-colors">
+                <ShoppingCart className="w-4 h-4 text-primary" /> View on Steam
+              </a>
+            )}
           </div>
 
           {/* Performance Banner */}
