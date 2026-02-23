@@ -25,7 +25,7 @@ function RelatedGames({ currentGame, games }: { currentGame: Game; games: Game[]
         {related.map((g) => (
           <Link key={g.id} to={`/game/${g.id}`} className="glass-card overflow-hidden group hover:scale-[1.02] transition-transform">
             <div className="relative aspect-video overflow-hidden">
-              <img src={getGameCover(g.name, g.genre)} alt={g.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy" />
+              <img src={getGameCover(g.name, g.genre)} alt={g.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy" referrerPolicy="no-referrer" />
               <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent" />
             </div>
             <div className="p-2">
@@ -105,7 +105,7 @@ export default function GameDetailPage() {
 
       {/* Hero */}
       <div className="relative h-64 sm:h-80 md:h-[420px] overflow-hidden">
-        <img src={cover} alt={game.name} className="w-full h-full object-cover" />
+        <img src={cover} alt={game.name} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/20" />
 
         {/* Top bar */}
