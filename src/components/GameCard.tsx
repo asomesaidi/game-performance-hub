@@ -40,6 +40,7 @@ export const GameCard = memo(({ game, index, isFavorite, onToggleFavorite, perfo
               src={imgSrc}
               alt={game.name}
               loading="lazy"
+              referrerPolicy="no-referrer"
               onError={() => setImgSrc(fallback)}
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             />

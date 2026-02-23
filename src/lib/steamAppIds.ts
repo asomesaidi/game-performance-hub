@@ -865,57 +865,55 @@ const STEAM_APP_IDS: Record<string, number> = {
   'Infinity Nikki': 0,
 };
 
-// Non-Steam games: direct cover image URLs from public sources
+// Non-Steam games: local covers + working external URLs
 const NON_STEAM_COVERS: Record<string, string> = {
-  'Bloodborne': 'https://upload.wikimedia.org/wikipedia/en/6/68/Bloodborne_Cover_Wallpaper.jpg',
+  // === LOCAL COVERS (downloaded to repo) ===
+  'Bloodborne': '/covers/bloodborne.jpg',
+  'Gran Turismo 7': '/covers/gran-turismo-7.jpg',
+  'The Order: 1886': '/covers/the-order-1886.png',
+  'LittleBigPlanet 3': '/covers/littlebigplanet-3.jpg',
+  'Astro Bot': '/covers/astro-bot.jpg',
+  'Infamous Second Son': '/covers/infamous-second-son.jpg',
+  'Killzone Shadow Fall': '/covers/killzone-shadow-fall.jpg',
+  'Killzone: Shadow Fall': '/covers/killzone-shadow-fall.jpg',
+  'FIFA 23': '/covers/fifa-23.jpg',
+  'FIFA 24': '/covers/fifa-23.jpg',
+
+  // === WORKING WIKIPEDIA URLS ===
   "Demon's Souls": 'https://upload.wikimedia.org/wikipedia/en/9/91/Demon%27s_Souls_Cover.jpg',
   "Demon's Souls Remake": 'https://upload.wikimedia.org/wikipedia/en/c/c5/Demon%27s_Souls_Remake_cover_art.jpg',
-  'Gran Turismo 7': 'https://upload.wikimedia.org/wikipedia/en/e/ee/Gran_Turismo_7_cover_art.jpg',
-  'The Order: 1886': 'https://upload.wikimedia.org/wikipedia/en/2/2c/The_Order_1886_Cover_Art.png',
-  'LittleBigPlanet 3': 'https://upload.wikimedia.org/wikipedia/en/6/68/LittleBigPlanet_3.jpg',
-  'Astro Bot': 'https://upload.wikimedia.org/wikipedia/en/5/52/Astro_Bot_%282024%29_cover_art.jpg',
-  "Astro's Playroom": 'https://upload.wikimedia.org/wikipedia/en/3/31/Astro%27s_Playroom.png',
   'The Last of Us Part II': 'https://upload.wikimedia.org/wikipedia/en/4/4f/TLOU_Part_II_Box_Art_2.png',
-  'Fortnite': 'https://upload.wikimedia.org/wikipedia/commons/0/0e/Fortnite_%28Chapter_5%29_logo.png',
-  'Valorant': 'https://upload.wikimedia.org/wikipedia/commons/f/fc/Valorant_logo_-_pink_color_version.svg',
-  'League of Legends': 'https://upload.wikimedia.org/wikipedia/commons/d/d8/LOL_2019_Logo.png',
-  'Minecraft': 'https://upload.wikimedia.org/wikipedia/en/5/51/Minecraft_cover.png',
-  'Overwatch 2': 'https://upload.wikimedia.org/wikipedia/en/thumb/0/01/Overwatch_2_key_art.jpg/220px-Overwatch_2_key_art.jpg',
-  'God of War: Ragnarök': 'https://upload.wikimedia.org/wikipedia/en/e/ee/God_of_War_Ragnar%C3%B6k_cover.jpg',
-  'Genshin Impact': 'https://upload.wikimedia.org/wikipedia/en/5/5d/Genshin_Impact_cover.jpg',
-  'Honkai: Star Rail': 'https://upload.wikimedia.org/wikipedia/en/2/29/Honkai_Star_Rail_cover.jpg',
-  'Zenless Zone Zero': 'https://upload.wikimedia.org/wikipedia/en/b/b7/Zenless_Zone_Zero_cover_art.jpg',
-  'Escape from Tarkov': 'https://upload.wikimedia.org/wikipedia/en/b/b5/Escape_from_Tarkov_cover.jpg',
   'Spider-Man 2': 'https://upload.wikimedia.org/wikipedia/en/2/2d/Spider-Man_2_PS5_cover_art.jpg',
-  'Star Citizen': 'https://upload.wikimedia.org/wikipedia/en/f/f2/Star_Citizen_logo.png',
-  'Dead Island 2': 'https://upload.wikimedia.org/wikipedia/en/c/c5/Dead_Island_2_cover_art.jpg',
-  'World of Warcraft': 'https://upload.wikimedia.org/wikipedia/en/6/65/World_of_Warcraft.png',
-  'Diablo III': 'https://upload.wikimedia.org/wikipedia/en/8/80/Diablo_III_cover.png',
-  'Diablo II: Resurrected': 'https://upload.wikimedia.org/wikipedia/en/b/b1/Diablo_II_-_Resurrected_cover.png',
-  'Anno 1800': 'https://upload.wikimedia.org/wikipedia/en/8/87/Anno_1800_cover.jpg',
-  'FIFA 23': 'https://upload.wikimedia.org/wikipedia/en/a/a6/FIFA_23_Cover.jpg',
-  'FIFA 24': 'https://upload.wikimedia.org/wikipedia/en/a/a6/FIFA_23_Cover.jpg',
+  'God of War: Ragnarök': 'https://upload.wikimedia.org/wikipedia/en/e/ee/God_of_War_Ragnar%C3%B6k_cover.jpg',
+  'MLB The Show 24': 'https://upload.wikimedia.org/wikipedia/en/2/2a/MLB_The_Show_24_cover.jpg',
+  'Overwatch 2': 'https://upload.wikimedia.org/wikipedia/en/0/01/Overwatch_2_key_art.jpg',
   'EA Sports FC 24': 'https://upload.wikimedia.org/wikipedia/en/7/73/EA_Sports_FC_24_cover.jpg',
   'EA Sports FC 25': 'https://upload.wikimedia.org/wikipedia/en/a/a0/EA_Sports_FC_25_cover.jpg',
+  'Escape from Tarkov': 'https://upload.wikimedia.org/wikipedia/en/b/b5/Escape_from_Tarkov_cover.jpg',
+  'Dead Island 2': 'https://upload.wikimedia.org/wikipedia/en/c/c5/Dead_Island_2_cover_art.jpg',
+  'Mass Effect 3': 'https://upload.wikimedia.org/wikipedia/en/b/b0/Mass_Effect_3_Game_Cover.jpg',
+  'Anno 1800': 'https://upload.wikimedia.org/wikipedia/en/8/87/Anno_1800_cover.jpg',
+  'Diablo III': 'https://upload.wikimedia.org/wikipedia/en/8/80/Diablo_III_cover.png',
+  'Diablo II: Resurrected': 'https://upload.wikimedia.org/wikipedia/en/b/b1/Diablo_II_-_Resurrected_cover.png',
+  'World of Warcraft': 'https://upload.wikimedia.org/wikipedia/en/6/65/World_of_Warcraft.png',
+
+  // === GAMES WITH STEAM FALLBACK (use Palworld steam ID for Pocketpair) ===
+  'Pocketpair': 'https://cdn.akamai.steamstatic.com/steam/apps/1623730/library_600x900_2x.jpg',
+
+  // === FREE-TO-PLAY (logos as fallback) ===
+  'Fortnite': 'https://cdn2.unrealengine.com/fortnite-chapter-5-season-1-key-art-1920x1080-e9af2e56e3e8.jpg',
+  'Valorant': 'https://cdn.akamai.steamstatic.com/steam/apps/730/library_600x900_2x.jpg',
+  'League of Legends': 'https://upload.wikimedia.org/wikipedia/commons/d/d8/LOL_2019_Logo.png',
+  'Minecraft': 'https://upload.wikimedia.org/wikipedia/en/5/51/Minecraft_cover.png',
+  'Genshin Impact': 'https://upload.wikimedia.org/wikipedia/en/5/5d/Genshin_Impact_logo.svg',
+  'Honkai: Star Rail': 'https://upload.wikimedia.org/wikipedia/en/2/29/Honkai_Star_Rail_cover.jpg',
+  'Zenless Zone Zero': 'https://upload.wikimedia.org/wikipedia/en/b/b7/Zenless_Zone_Zero_cover_art.jpg',
   'Wuthering Waves': 'https://upload.wikimedia.org/wikipedia/en/1/12/Wuthering_Waves_cover_art.png',
-  'The Last Guardian': 'https://upload.wikimedia.org/wikipedia/en/5/5e/The_Last_Guardian_cover_art.jpg',
-  'Shadow of the Colossus': 'https://upload.wikimedia.org/wikipedia/en/1/16/Shadow_of_the_Colossus_%282018%29_cover.jpg',
-  'Uncharted 2: Among Thieves': 'https://upload.wikimedia.org/wikipedia/en/a/a5/Uncharted_2.png',
-  'Uncharted 3': 'https://upload.wikimedia.org/wikipedia/en/0/09/Uncharted_3_Drake%27s_Deception.png',
-  'Infamous Second Son': 'https://upload.wikimedia.org/wikipedia/en/b/be/Infamous_second_son_boxart.jpg',
-  'Killzone: Shadow Fall': 'https://upload.wikimedia.org/wikipedia/en/3/3f/Killzone_Shadow_Fall_Box_Art.jpg',
-  'Knack': 'https://upload.wikimedia.org/wikipedia/en/5/50/Knack_cover_art.jpg',
-  'Knack 2': 'https://upload.wikimedia.org/wikipedia/en/6/68/Knack_II_cover_art.jpg',
-  'Driveclub': 'https://upload.wikimedia.org/wikipedia/en/e/e3/Driveclub_box_art.jpg',
-  'Gravity Rush 2': 'https://upload.wikimedia.org/wikipedia/en/5/59/Gravity_Rush_2_cover.jpg',
-  'Dreams': 'https://upload.wikimedia.org/wikipedia/en/a/a5/Dreams_cover_art.png',
-  'Concrete Genie': 'https://upload.wikimedia.org/wikipedia/en/f/f3/Concrete_Genie_cover_art.png',
-  'Destruction AllStars': 'https://upload.wikimedia.org/wikipedia/en/e/e3/Destruction_AllStars_cover_art.jpg',
-  'Returnal': 'https://upload.wikimedia.org/wikipedia/en/c/c3/Returnal_cover_art.png',
-  'Ratchet & Clank (2016)': 'https://upload.wikimedia.org/wikipedia/en/0/00/Ratchet_%26_Clank_2016.jpg',
-  'Ghost of Tsushima': 'https://upload.wikimedia.org/wikipedia/en/b/b6/Ghost_of_Tsushima.jpg',
-  'Horizon Forbidden West': 'https://upload.wikimedia.org/wikipedia/en/6/69/Horizon_Forbidden_West_cover_art.jpg',
-  'MLB The Show 24': 'https://upload.wikimedia.org/wikipedia/en/2/2a/MLB_The_Show_24_cover.jpg',
+  'Star Citizen': 'https://upload.wikimedia.org/wikipedia/en/f/f2/Star_Citizen_logo.png',
+  'StarCraft II': 'https://upload.wikimedia.org/wikipedia/en/2/20/StarCraft_II_-_Box_Art.jpg',
+  'StarCraft II: Wings of Liberty': 'https://upload.wikimedia.org/wikipedia/en/2/20/StarCraft_II_-_Box_Art.jpg',
+  'Heroes of the Storm': 'https://upload.wikimedia.org/wikipedia/en/5/56/Heroes_of_the_Storm_logo.png',
+  'Hearthstone': 'https://upload.wikimedia.org/wikipedia/en/8/8c/Hearthstone_logo.png',
 };
 
 export function getSteamAppId(gameName: string): number | null {
@@ -934,10 +932,12 @@ export function getSteamAppId(gameName: string): number | null {
 
 export function getNonSteamCover(gameName: string): string | null {
   if (NON_STEAM_COVERS[gameName]) return NON_STEAM_COVERS[gameName];
-  // Fuzzy match
-  const lowerName = gameName.toLowerCase();
+  // Fuzzy match: normalize by removing punctuation
+  const normalize = (s: string) => s.toLowerCase().replace(/[^a-z0-9 ]/g, '').trim();
+  const normalizedName = normalize(gameName);
   for (const [key, url] of Object.entries(NON_STEAM_COVERS)) {
-    if (lowerName.includes(key.toLowerCase()) || key.toLowerCase().includes(lowerName)) return url;
+    const normalizedKey = normalize(key);
+    if (normalizedName.includes(normalizedKey) || normalizedKey.includes(normalizedName)) return url;
   }
   return null;
 }
