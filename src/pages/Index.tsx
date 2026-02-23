@@ -255,6 +255,29 @@ const Index = () => {
         </section>
       </main>
 
+      {/* Footer */}
+      <footer className="border-t border-border/30 bg-background/50 backdrop-blur-sm mt-12">
+        <div className="container py-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <img src={logoImg} alt="GameSpec AI" className="w-7 h-7 rounded-lg" />
+              <div>
+                <p className="text-sm font-semibold text-foreground">GameSpec AI</p>
+                <p className="text-xs text-muted-foreground">Can My PC Run It?</p>
+              </div>
+            </div>
+            <nav className="flex items-center gap-6 text-xs text-muted-foreground" aria-label="Footer navigation">
+              <Link to="/" className="hover:text-foreground transition-colors">Home</Link>
+              <Link to="/favorites" className="hover:text-foreground transition-colors">Favorites</Link>
+              <Link to="/compare" className="hover:text-foreground transition-colors">Compare GPUs</Link>
+            </nav>
+            <p className="text-[10px] text-muted-foreground">
+              © {new Date().getFullYear()} GameSpec AI. Game data sourced from public databases.
+            </p>
+          </div>
+        </div>
+      </footer>
+
       {/* Filter Panel */}
       <FilterPanel
         open={filterOpen}
