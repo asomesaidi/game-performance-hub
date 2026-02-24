@@ -18,6 +18,7 @@ const STEAM_APP_IDS: Record<string, number> = {
   'The Witcher 3: Wild Hunt': 292030,
   'The Witcher 3': 292030,
   'The Witcher 2': 20920,
+  'The Witcher 2: Assassins of Kings': 20920,
   'The Witcher': 20900,
   'Elden Ring': 1245620,
   'Elden Ring Shadow of the Erdtree': 1245620,
@@ -37,9 +38,9 @@ const STEAM_APP_IDS: Record<string, number> = {
   'Call of Duty: World at War': 10090,
   'Apex Legends': 1172470,
   'PUBG: Battlegrounds': 578080,
-  'PlayerUnknown\'s Battlegrounds': 578080,
+  "PlayerUnknown's Battlegrounds": 578080,
   'Rainbow Six Siege': 359550,
-  'Tom Clancy\'s Rainbow Six Siege': 359550,
+  "Tom Clancy's Rainbow Six Siege": 359550,
   'Rocket League': 252950,
 
   // === SONY / PS PORTS ===
@@ -200,6 +201,7 @@ const STEAM_APP_IDS: Record<string, number> = {
   'Prey': 480490,
   'Bioshock Infinite': 8870,
   'BioShock Infinite': 8870,
+  'Bioshock Infinite Remastered': 8870,
   'Bioshock Remastered': 409710,
   'BioShock Remastered': 409710,
   'Bioshock 2 Remastered': 409720,
@@ -254,8 +256,6 @@ const STEAM_APP_IDS: Record<string, number> = {
   'Code Vein': 678960,
   'Armored Core VI': 1888160,
   'Armored Core VI: Fires of Rubicon': 1888160,
-  'Diablo III': 0,
-  'Diablo II: Resurrected': 0,
   'Like a Dragon: Infinite Wealth': 2072450,
   'Like a Dragon: Ishin!': 1805480,
   'Yakuza: Like a Dragon': 1235140,
@@ -266,7 +266,7 @@ const STEAM_APP_IDS: Record<string, number> = {
   'Yakuza 4 Remastered': 1105500,
   'Yakuza 5 Remastered': 1105510,
   'Yakuza 6': 1388590,
-  'Dragon\'s Dogma 2': 2054970,
+  "Dragon's Dogma 2": 2054970,
   "Dragon's Dogma: Dark Arisen": 367500,
   'Black Myth: Wukong': 2358720,
   'Disco Elysium': 632470,
@@ -275,6 +275,7 @@ const STEAM_APP_IDS: Record<string, number> = {
   'Divinity: Original Sin': 230230,
   'Pillars of Eternity': 291650,
   'Pillars of Eternity II': 560130,
+  'Pillars of Eternity II: Deadfire': 560130,
   'Pathfinder: Wrath of the Righteous': 1184370,
   'Pathfinder: Kingmaker': 640820,
   'Torchlight II': 200710,
@@ -287,6 +288,20 @@ const STEAM_APP_IDS: Record<string, number> = {
   'Path of Exile 2': 2694490,
   'Lost Ark': 1599340,
   'Chronicon': 375480,
+  'Tyranny': 362960,
+  'Torment: Tides of Numenera': 272270,
+  'Planescape: Torment - Enhanced Edition': 466300,
+  'Icewind Dale: Enhanced Edition': 321800,
+  "Baldur's Gate: Enhanced Edition": 228280,
+  "Baldur's Gate II: Enhanced Edition": 257350,
+  'Neverwinter Nights: Enhanced Edition': 704450,
+  'Neverwinter Nights 2': 0,
+  'Encased': 921800,
+  'Colony Ship': 648410,
+  'Age of Decadence': 230070,
+  'Fell Seal: Arbiter\'s Mark': 699170,
+  'Battle Brothers': 365360,
+  'Druidstone: The Secret of the Menhir Forest': 954650,
 
   // === OPEN WORLD / ACTION ADVENTURE ===
   'Sleeping Dogs': 307690,
@@ -312,7 +327,6 @@ const STEAM_APP_IDS: Record<string, number> = {
   'Devil May Cry 4': 45700,
   'DmC: Devil May Cry': 220440,
   'Bayonetta': 460790,
-  'Bayonetta 2': 0,
   'Ghostwire: Tokyo': 1475810,
   'Hi-Fi Rush': 1817230,
   'Tomb Raider (2013)': 203160,
@@ -334,8 +348,8 @@ const STEAM_APP_IDS: Record<string, number> = {
   'Immortals Fenyx Rising': 2001710,
   'Dying Light 2': 534380,
   'Dying Light': 239140,
-  'Mirror\'s Edge Catalyst': 1233570,
-  'Mirror\'s Edge': 17410,
+  "Mirror's Edge Catalyst": 1233570,
+  "Mirror's Edge": 17410,
 
   // === SURVIVAL ===
   'Rust': 252490,
@@ -376,17 +390,12 @@ const STEAM_APP_IDS: Record<string, number> = {
   'Unravel Two': 1225570,
   'Unravel': 1225560,
 
-  // === BATTLE ROYALE ===
-  'Fortnite': 0,
-  'Valorant': 0,
-
   // === MOBA ===
-  'League of Legends': 0,
   'Dota 2': 570,
   'Smite': 386360,
+  'SMITE 2': 2437510,
 
   // === SANDBOX / INDIE ===
-  'Minecraft': 0,
   'Terraria': 105600,
   'Starbound': 211820,
   "Don't Starve Together": 322330,
@@ -403,10 +412,16 @@ const STEAM_APP_IDS: Record<string, number> = {
   'Vintage Story': 1592060,
   'Eco': 382310,
   'Trailmakers': 585420,
+  'Dwarf Fortress': 975370,
+  'Gnomoria': 224500,
+  'Stonehearth': 253250,
+  'Castle Story': 227860,
+  'FortressCraft Evolved': 254200,
+  'Craft the World': 248390,
+  'Dig or Die': 315460,
 
   // === ROGUELIKES / INDIE ===
   'Slay the Spire': 646570,
-  'Slay the Spire 2': 0,
   'Hades': 1145360,
   'Hades II': 1145350,
   'Dead Cells': 588650,
@@ -419,6 +434,7 @@ const STEAM_APP_IDS: Record<string, number> = {
   'Undertale': 391540,
   'Deltarune': 1671210,
   'The Binding of Isaac: Rebirth': 250900,
+  'The Binding of Isaac': 113200,
   'Enter the Gungeon': 311690,
   'Risk of Rain 2': 632360,
   'Vampire Survivors': 1794680,
@@ -441,6 +457,7 @@ const STEAM_APP_IDS: Record<string, number> = {
   'Spelunky 2': 418530,
   'Into the Breach': 590380,
   'FTL: Faster Than Light': 212680,
+  'Faster Than Light': 212680,
   'The Messenger': 764790,
   'Hyper Light Drifter': 257850,
   'CrossCode': 368340,
@@ -452,6 +469,10 @@ const STEAM_APP_IDS: Record<string, number> = {
   'Roboquest': 692890,
   'Brotato': 1942280,
   '20 Minutes Till Dawn': 1966900,
+  'Monster Train': 1102190,
+  'Griftlands': 601840,
+  'Dicey Dungeons': 861540,
+  'Loop Hero': 1282730,
 
   // === RACING ===
   'Need for Speed Heat': 1222680,
@@ -483,19 +504,22 @@ const STEAM_APP_IDS: Record<string, number> = {
   'WRC Generations': 1756750,
   'TrackMania': 2225070,
   'The Crew 2': 646910,
-  'The Crew Motorfest': 0,
   'Riders Republic': 2290630,
   'Beam.ng Drive': 284160,
   'BeamNG.drive': 284160,
   'My Summer Car': 516750,
   'Carx Drift Racing Online': 635260,
   'Art of Rally': 550320,
+  'Trackmania Turbo': 375900,
+  'Trackmania 2: Canyon': 228760,
+  'Trackmania Nations Forever': 11020,
+  'Trials Rising': 1085130,
+  'Trials Fusion': 245490,
 
   // === STRATEGY ===
   'Civilization VI': 289070,
   'Civilization V': 8930,
   'Civilization IV': 3900,
-  'Civilization VII': 0,
   'Total War: Warhammer III': 1142710,
   'Total War: Warhammer II': 594570,
   'Total War: Warhammer': 364360,
@@ -507,9 +531,11 @@ const STEAM_APP_IDS: Record<string, number> = {
   'Total War: Empire': 10500,
   'Total War: Troy': 1099410,
   'Total War: Pharaoh': 2424220,
+  'Total War: Medieval II': 4700,
   'Crusader Kings III': 1158310,
   'Crusader Kings II': 203770,
   'Europa Universalis IV': 236850,
+  'Europa Universalis III': 25800,
   'Hearts of Iron IV': 394360,
   'Stellaris': 281990,
   'Victoria 3': 529340,
@@ -523,7 +549,6 @@ const STEAM_APP_IDS: Record<string, number> = {
   'Age of Empires: Definitive Edition': 1017900,
   'Age of Mythology: Extended Edition': 266840,
   'Age of Mythology: Retold': 1934680,
-  'StarCraft II: Wings of Liberty': 0,
   'Humankind': 1124300,
   'Old World': 597180,
   'Frostpunk': 323190,
@@ -531,15 +556,25 @@ const STEAM_APP_IDS: Record<string, number> = {
   'They Are Billions': 644930,
   'Northgard': 466560,
   'Banished': 242920,
-  'Anno 1800': 0,
   'Manor Lords': 1363080,
   'Against the Storm': 1336490,
   'Dune: Spice Wars': 1605220,
   'Wartales': 1527950,
+  'Command & Conquer: Remastered Collection': 1213210,
+  'Command & Conquer 3: Tiberium Wars': 24790,
+  'Command & Conquer: Red Alert 3': 17480,
+  'Rise of Nations: Extended Edition': 325080,
+  'Supreme Commander': 9350,
+  'Supreme Commander: Forged Alliance': 9420,
+  'Sins of a Solar Empire: Rebellion': 204880,
+  'Galactic Civilizations III': 226860,
+  'Endless Space 2': 392110,
+  'Endless Legend': 289130,
 
   // === SIMULATION ===
   'Cities: Skylines': 255710,
   'Cities: Skylines II': 949230,
+  'Cities XL Platinum': 231140,
   'Planet Coaster': 493340,
   'Planet Coaster 2': 2688040,
   'Planet Zoo': 703080,
@@ -571,10 +606,22 @@ const STEAM_APP_IDS: Record<string, number> = {
   'Jurassic World Evolution 2': 1244460,
   'Jurassic World Evolution': 648350,
   'Cooking Simulator': 641320,
-  'Lumberjack\'s Dynasty': 968730,
+  "Lumberjack's Dynasty": 968730,
   'Medieval Dynasty': 1129580,
   'Ranch Simulator': 1119730,
   'Lawn Mowing Simulator': 1480560,
+  'Firefighting Simulator': 1222240,
+  'RollerCoaster Tycoon 3: Complete Edition': 1368820,
+  'RollerCoaster Tycoon Classic': 683900,
+  'Parkitect': 453090,
+  'Prison Architect': 233450,
+  'Timberborn': 1062090,
+  'Farthest Frontier': 1044720,
+  'Going Medieval': 1029780,
+  'Foundation': 690830,
+  'Workers & Resources: Soviet Republic': 784150,
+  'Captain of Industry': 1594320,
+  'Sapiens': 1060230,
 
   // === FIGHTING ===
   'Mortal Kombat 11': 976310,
@@ -594,7 +641,7 @@ const STEAM_APP_IDS: Record<string, number> = {
   'Brawlhalla': 291550,
   'MultiVersus': 1818750,
   'Skullgirls 2nd Encore': 245170,
-  'Them\'s Fightin\' Herds': 574980,
+  "Them's Fightin' Herds": 574980,
   'Rivals of Aether': 383980,
   'Rivals of Aether II': 2217000,
   'Killer Instinct': 577940,
@@ -604,21 +651,30 @@ const STEAM_APP_IDS: Record<string, number> = {
   'Melty Blood: Type Lumina': 1372280,
 
   // === SPORTS ===
-  'FIFA 23': 0,
-  'FIFA 24': 0,
-  'EA Sports FC 24': 0,
-  'EA Sports FC 25': 0,
   'NBA 2K24': 2338960,
   'NBA 2K25': 2688840,
   'NBA 2K23': 1919590,
+  'NBA 2K22': 1644960,
+  'NBA 2K21': 1225330,
+  'NBA 2K20': 1089350,
+  'NBA 2K Playgrounds 2': 726590,
+  'NBA Playgrounds': 726590,
   'Madden NFL 24': 2037920,
+  'Madden NFL 23': 1911680,
+  'Madden NFL 22': 0,
+  'Madden NFL 21': 0,
+  'Madden NFL 20': 0,
   'WWE 2K24': 2492160,
   'WWE 2K23': 1942660,
-  'Tony Hawk\'s Pro Skater 1 + 2': 2395210,
+  'WWE 2K22': 1255630,
+  'WWE 2K Battlegrounds': 1458480,
+  'AEW: Fight Forever': 1905330,
+  "Tony Hawk's Pro Skater 1 + 2": 2395210,
   'Steep': 460920,
-  'PGA Tour 2K23': 0,
-  'Gran Turismo 7': 0,
-  'MLB The Show 24': 0,
+  'eFootball 2024': 1665460,
+  'eFootball 2023': 1665460,
+  'eFootball 2022': 1665460,
+  'Pro Evolution Soccer 2021': 1259970,
 
   // === VALVE CLASSICS ===
   'Team Fortress 2': 440,
@@ -649,11 +705,11 @@ const STEAM_APP_IDS: Record<string, number> = {
   'Fallout': 38400,
   'Fallout Tactics': 38420,
   'Fallout Shelter': 588430,
+  'Fallout: Brotherhood of Steel': 38400,
 
   // === EA / BIOWARE ===
   'Mass Effect Legendary Edition': 1328670,
   'Mass Effect: Andromeda': 1238000,
-  'Mass Effect 3': 0,
   'Mass Effect 2': 24980,
   'Mass Effect': 17460,
   'Dragon Age: Inquisition': 1222690,
@@ -662,14 +718,44 @@ const STEAM_APP_IDS: Record<string, number> = {
   'Dragon Age: The Veilguard': 1845910,
   'Anthem': 1238040,
   'Star Wars: Squadrons': 1222730,
+  'Jade Empire': 7110,
+
+  // === STAR WARS RPG ===
+  'Knights of the Old Republic': 32370,
+  'Knights of the Old Republic II': 208580,
 
   // === WARHAMMER / ACTION ===
   'Warhammer 40K: Darktide': 1361210,
   'Warhammer: Vermintide 2': 552500,
+  'Warhammer: End Times - Vermintide': 235540,
   'Warhammer 40K: Space Marine 2': 2183900,
+  "Warhammer 40,000: Space Marine 2": 2183900,
+  "Warhammer 40,000: Space Marine": 55150,
   'Atomic Heart': 668580,
   'Remnant 2': 1282100,
   'Remnant: From the Ashes': 617290,
+
+  // === WARHAMMER STRATEGY ===
+  'Dawn of War III': 285190,
+  'Dawn of War II': 15620,
+  'Dawn of War: Soulstorm': 9450,
+  'Blood Bowl 2': 236690,
+  'Blood Bowl 3': 1449970,
+  'Mordheim: City of the Damned': 276810,
+  'Battlefleet Gothic: Armada': 363680,
+  'Battlefleet Gothic: Armada 2': 573740,
+  'Space Hulk: Deathwing': 816090,
+  'Space Hulk: Tactics': 492230,
+  'Inquisitor - Martyr': 527430,
+  'Inquisitor - Prophecy': 527430,
+  'Chaos Gate - Daemonhunters': 1611910,
+  "Warhammer 40,000: Gladius - Relics of War": 489630,
+  'Gladius - Relics of War': 489630,
+  "Warhammer 40,000: Battlesector": 1295500,
+  "Warhammer 40,000: Sanctus Reach": 517030,
+  "Warhammer 40,000: Armageddon": 312370,
+  'Warhammer 40,000: Rogue Trader': 2186680,
+  'Rogue Trader': 2186680,
 
   // === PAYDAY ===
   'Payday 3': 1272080,
@@ -696,21 +782,17 @@ const STEAM_APP_IDS: Record<string, number> = {
   'Clair Obscur: Expedition 33': 1903340,
   'Indiana Jones and the Great Circle': 2677660,
   'S.T.A.L.K.E.R. 2': 1643320,
-  'Warhammer 40,000: Space Marine 2': 2183900,
+  'Fae Farm': 2113110,
 
   // === ASIAN MMO / GACHA ===
-  'Honkai: Star Rail': 0,
-  'Genshin Impact': 0,
   'Tower of Fantasy': 2064650,
-  'Zenless Zone Zero': 0,
-  'Wuthering Waves': 0,
-  'Blue Protocol': 0,
   'Phantasy Star Online 2': 1056640,
   'Black Desert Online': 582660,
   'New World': 1063730,
   'Guild Wars 2': 1284210,
   'Warframe': 230410,
   'Destiny 2': 1085660,
+  'Punishing: Gray Raven': 2380850,
 
   // === CLASSIC RPGS / INDIE RPGS ===
   'Lisa: The Painful': 335670,
@@ -721,25 +803,31 @@ const STEAM_APP_IDS: Record<string, number> = {
   'Everhood': 1229380,
   'Darkest Dungeon': 262060,
   'Darkest Dungeon II': 1940340,
+  'Ib': 1901370,
+  'Mad Father': 483980,
+  "The Witch's House": 885810,
+  'Misao': 691450,
 
   // === SPACE ===
   'Elite Dangerous': 359320,
   'Elite Dangerous: Odyssey': 1336350,
-  'Star Citizen': 0,
   'Empyrion - Galactic Survival': 383120,
   'The Outer Worlds': 578650,
-  'The Outer Worlds: Spacer\'s Choice Edition': 2052530,
+  "The Outer Worlds: Spacer's Choice Edition": 2052530,
   'Outer Wilds': 753640,
 
   // === WASTELAND / CRPG ===
   'Wasteland 3': 719040,
   'Wasteland 2': 240760,
+  'Wasteland 1: The Original Classic': 259130,
   'Underrail': 250520,
   'Atom RPG': 552620,
   'ATOM RPG Trudograd': 1139940,
   'Kenshi': 233860,
   'Mount & Blade II: Bannerlord': 261550,
   'Mount & Blade: Warband': 48700,
+  'Mount & Blade: With Fire & Sword': 48720,
+  'Mount & Blade': 22100,
 
   // === COZY / LIFE SIM ===
   'Spiritfarer': 972660,
@@ -760,28 +848,33 @@ const STEAM_APP_IDS: Record<string, number> = {
   'Pavlov VR': 555160,
   'Beat Saber': 620980,
   'The Walking Dead: Saints & Sinners': 916840,
+  'The Walking Dead: Saints & Sinners - Chapter 2: Retribution': 1947500,
+  'Contractors': 963930,
+  'Onward': 496240,
+  'Population: One': 691260,
+  'Until You Fall': 858260,
+  'Gorn': 578620,
+  'Thrill of the Fight': 494150,
+  'Drunkn Bar Fight': 528550,
+  'Medal of Honor: Above and Beyond': 1402320,
 
   // === RTS / MISC STRATEGY ===
   'Tropico 6': 492720,
   'Surviving Mars': 464920,
   'Offworld Trading Company': 271240,
-  'Dawn of War III': 285190,
   'Iron Harvest': 826630,
   'Ashes of the Singularity': 507490,
+  'Ashes of the Singularity: Escalation': 507490,
   'Sins of a Solar Empire II': 1575940,
-  'Tempest Rising': 1486920,
 
   // === MISC GAMES ===
-  'Redfall': 2217000,
   'For Honor': 304390,
   'South Park: The Fractured But Whole': 488790,
   'South Park: The Stick of Truth': 213670,
   'World War Z': 699130,
   'Back 4 Blood': 924970,
-  'Dead Island 2': 0,
   'Dead Island': 91310,
   'Dead Island: Riptide': 204040,
-  'Overwatch 2': 0,
   'Friday the 13th': 438740,
   'Psychonauts 2': 607080,
   'Psychonauts': 3830,
@@ -796,7 +889,6 @@ const STEAM_APP_IDS: Record<string, number> = {
   'Solar Ash': 2078820,
   'Neon Abyss': 788100,
   'Curse of the Dead Gods': 1123770,
-  'Loop Hero': 1282730,
   'Wylde Flowers': 1545560,
   'Citizen Sleeper': 1578650,
   'Norco': 1221250,
@@ -805,46 +897,16 @@ const STEAM_APP_IDS: Record<string, number> = {
   'Somerville': 1567640,
   'Signalis': 1585440,
   'Chained Echoes': 1229240,
-
-  // === MANAGEMENT SIM ===
-  'RollerCoaster Tycoon 3: Complete Edition': 1368820,
-  'Parkitect': 453090,
-  'Prison Architect': 233450,
-  'Dwarf Fortress': 975370,
-  'Timberborn': 1062090,
-  'Farthest Frontier': 1044720,
-  'Going Medieval': 1029780,
-  'Foundation': 690830,
-  'Workers & Resources: Soviet Republic': 784150,
-  'Captain of Industry': 1594320,
-  'Sapiens': 1060230,
-
-  // === ADDITIONAL POPULAR GAMES ===
   'Geometry Dash': 322170,
-  'The Binding of Isaac': 113200,
-  'Escape from Tarkov': 0,
   'War Thunder': 236390,
-  'World of Tanks': 0,
-  'World of Warships': 0,
-  'World of Warcraft': 0,
-  'SMITE 2': 2437510,
-  'Heroes of the Storm': 0,
-  'Hearthstone': 0,
-  'Rocket League Sideswipe': 0,
-  'Apex Legends Mobile': 0,
   'Splitgate': 677620,
-  'Super People': 1190340,
   'Naraka: Bladepoint': 1203220,
   'GTFO': 493520,
   'Marauders': 1789480,
-  'Cycle: Frontier': 0,
-  'XDefiant': 0,
   'The Finals': 2073850,
-  'Warhaven': 2107680,
   'Chivalry 2': 1824220,
   'Mordhau': 629760,
   'Hell Let Loose': 686810,
-  'Enlisted': 0,
   'Post Scriptum': 736220,
   'Beyond The Wire': 1058650,
   'Isonzo': 1556790,
@@ -858,11 +920,122 @@ const STEAM_APP_IDS: Record<string, number> = {
   'Spectre Divide': 2449680,
   'Marvel Snap': 1997040,
   'Throne and Liberty': 2429640,
-  'Tarisland': 0,
-  'Blue Archive': 0,
-  'Nikke: Goddess of Victory': 0,
-  'Solo Leveling: Arise': 0,
-  'Infinity Nikki': 0,
+
+  // === MANAGEMENT SIM ===
+  'SimCity (2013)': 0,
+
+  // === ADDITIONAL SPORTS ===
+  'NHL 24': 0,
+  'NHL 23': 0,
+  'NHL 22': 0,
+  'UFC 5': 0,
+  'UFC 4': 0,
+  'UFC 3': 0,
+  'Fight Night Champion': 0,
+  'Creed: Rise to Glory': 804490,
+
+  // === MISC VR ===
+  'Swords of Gurrah': 833090,
+  'Asgard\'s Wrath': 0,
+  'Asgard\'s Wrath 2': 0,
+  'Stormland': 0,
+  'Lone Echo': 0,
+  'Lone Echo II': 0,
+  'Echo VR': 0,
+  'Sparc': 0,
+
+  // === ADDITIONAL POPULAR GAMES ===
+  'Pocket Mirror': 1603750,
+  'Little Red Lie': 590880,
+  '.flow': 0,
+  '2kki': 0,
+  'Ao Oni': 0,
+  'OFF': 0,
+  'Timber and Stone': 0,
+
+  // === Blizzard (NOT on Steam) ===
+  'Overwatch 2': 0,
+  'Fortnite': 0,
+  'Valorant': 0,
+  'League of Legends': 0,
+  'Minecraft': 0,
+  'Honkai: Star Rail': 0,
+  'Genshin Impact': 0,
+  'Zenless Zone Zero': 0,
+  'Wuthering Waves': 0,
+  'Star Citizen': 0,
+  'StarCraft II: Wings of Liberty': 0,
+  'StarCraft Remastered': 0,
+  'Heroes of the Storm': 0,
+  'Hearthstone': 0,
+  'World of Warcraft': 0,
+  'World of Tanks': 0,
+  'World of Warships': 0,
+  'Escape from Tarkov': 0,
+  'FIFA 23': 0,
+  'FIFA 22': 0,
+  'FIFA 21': 0,
+  'FIFA 20': 0,
+  'FIFA 19': 0,
+  'FIFA 18': 0,
+  'FIFA 17': 0,
+  'FIFA 16': 0,
+  'FIFA 15': 0,
+  'FIFA 14': 0,
+  'EA Sports FC 24': 0,
+  'EA Sports FC 25': 0,
+  'Gran Turismo 7': 0,
+  'MLB The Show 24': 0,
+  'MLB The Show 23': 0,
+  'MLB The Show 22': 0,
+  'Dead Island 2': 0,
+  'Anno 1800': 0,
+  'Blue Protocol': 0,
+  'Diablo III': 0,
+  'Diablo II: Resurrected': 0,
+  'Mass Effect 3': 0,
+  'Warcraft III: Reforged': 0,
+  'Warcraft III: The Frozen Throne': 0,
+  'Command & Conquer: Generals': 0,
+
+  // === OLD WARHAMMER TABLETOP / OBSCURE ===
+  'Warhammer Online': 0,
+  'Mark of Chaos': 0,
+  'Battle March': 0,
+  'Dark Millennium Online': 0,
+  'Fire Warrior': 0,
+  'Rites of War': 0,
+  'Final Liberation': 0,
+  'Shadow of the Horned Rat': 0,
+  'Dark Omen': 0,
+  'Space Crusade': 0,
+  'Epic': 0,
+  'Gorkamorka': 0,
+  'Wrath & Glory': 0,
+  'Only War': 0,
+  'Deathwatch RPG': 0,
+  'Deathwatch': 0,
+  'Black Crusade': 0,
+  'Dark Heresy': 0,
+  'Kill Team': 0,
+  'Storm of Vengeance': 0,
+  'Regicide': 0,
+  'Sanctus Reach': 0,
+  'Armageddon': 0,
+
+  // === OLD/OBSCURE ===
+  'Empire Earth': 0,
+  'Empire Earth II': 0,
+  'Empire Earth III': 0,
+  'Rise of Legends': 0,
+  'Resident Evil 4 VR': 0,
+  'Resident Evil Village VR': 0,
+  'Boxing Star': 0,
+  'Real Boxing 2': 0,
+  'Real Boxing': 366090,
+  'EA Sports UFC 2': 0,
+  'Pro Evolution Soccer 2020': 0,
+  'Pro Evolution Soccer 2019': 0,
 };
 
 // Non-Steam games: local covers + working external URLs
@@ -878,14 +1051,22 @@ const NON_STEAM_COVERS: Record<string, string> = {
   'Killzone: Shadow Fall': '/covers/killzone-shadow-fall.jpg',
   'FIFA 23': '/covers/fifa-23.jpg',
   'FIFA 24': '/covers/fifa-23.jpg',
+  'FIFA 22': '/covers/fifa-23.jpg',
+  'FIFA 21': '/covers/fifa-23.jpg',
+  'FIFA 20': '/covers/fifa-23.jpg',
+  'FIFA 19': '/covers/fifa-23.jpg',
+  'FIFA 18': '/covers/fifa-23.jpg',
+  'FIFA 17': '/covers/fifa-23.jpg',
+  'FIFA 16': '/covers/fifa-23.jpg',
+  'FIFA 15': '/covers/fifa-23.jpg',
+  'FIFA 14': '/covers/fifa-23.jpg',
 
   // === WORKING WIKIPEDIA URLS ===
-  "Demon's Souls": 'https://upload.wikimedia.org/wikipedia/en/9/91/Demon%27s_Souls_Cover.jpg',
+  "Demon's Souls": 'https://upload.wikimedia.org/wikipedia/en/c/c5/Demon%27s_Souls_Remake_cover_art.jpg',
   "Demon's Souls Remake": 'https://upload.wikimedia.org/wikipedia/en/c/c5/Demon%27s_Souls_Remake_cover_art.jpg',
   'The Last of Us Part II': 'https://upload.wikimedia.org/wikipedia/en/4/4f/TLOU_Part_II_Box_Art_2.png',
   'Spider-Man 2': 'https://upload.wikimedia.org/wikipedia/en/2/2d/Spider-Man_2_PS5_cover_art.jpg',
   'God of War: Ragnarök': 'https://upload.wikimedia.org/wikipedia/en/e/ee/God_of_War_Ragnar%C3%B6k_cover.jpg',
-  'MLB The Show 24': 'https://upload.wikimedia.org/wikipedia/en/2/2a/MLB_The_Show_24_cover.jpg',
   'Overwatch 2': 'https://upload.wikimedia.org/wikipedia/en/0/01/Overwatch_2_key_art.jpg',
   'EA Sports FC 24': 'https://upload.wikimedia.org/wikipedia/en/7/73/EA_Sports_FC_24_cover.jpg',
   'EA Sports FC 25': 'https://upload.wikimedia.org/wikipedia/en/a/a0/EA_Sports_FC_25_cover.jpg',
@@ -896,32 +1077,74 @@ const NON_STEAM_COVERS: Record<string, string> = {
   'Diablo III': 'https://upload.wikimedia.org/wikipedia/en/8/80/Diablo_III_cover.png',
   'Diablo II: Resurrected': 'https://upload.wikimedia.org/wikipedia/en/b/b1/Diablo_II_-_Resurrected_cover.png',
   'World of Warcraft': 'https://upload.wikimedia.org/wikipedia/en/6/65/World_of_Warcraft.png',
-
-  // === GAMES WITH STEAM FALLBACK (use Palworld steam ID for Pocketpair) ===
-  'Pocketpair': 'https://cdn.akamai.steamstatic.com/steam/apps/1623730/library_600x900_2x.jpg',
-
-  // === FREE-TO-PLAY (logos as fallback) ===
-  'Fortnite': 'https://cdn2.unrealengine.com/fortnite-chapter-5-season-1-key-art-1920x1080-e9af2e56e3e8.jpg',
-  'Valorant': 'https://cdn.akamai.steamstatic.com/steam/apps/730/library_600x900_2x.jpg',
-  'League of Legends': 'https://upload.wikimedia.org/wikipedia/commons/d/d8/LOL_2019_Logo.png',
+  'MLB The Show 24': 'https://upload.wikimedia.org/wikipedia/en/2/2a/MLB_The_Show_24_cover.jpg',
+  'MLB The Show 23': 'https://upload.wikimedia.org/wikipedia/en/2/2a/MLB_The_Show_24_cover.jpg',
+  'MLB The Show 22': 'https://upload.wikimedia.org/wikipedia/en/2/2a/MLB_The_Show_24_cover.jpg',
+  'Fortnite': 'https://upload.wikimedia.org/wikipedia/en/0/0e/FortniteCover.png',
+  'Valorant': 'https://upload.wikimedia.org/wikipedia/en/b/ba/Valorant_cover.jpg',
+  'League of Legends': 'https://upload.wikimedia.org/wikipedia/en/1/17/League_of_Legends_logo.png',
   'Minecraft': 'https://upload.wikimedia.org/wikipedia/en/5/51/Minecraft_cover.png',
-  'Genshin Impact': 'https://upload.wikimedia.org/wikipedia/en/5/5d/Genshin_Impact_logo.svg',
+  'Genshin Impact': 'https://upload.wikimedia.org/wikipedia/en/5/5d/Genshin_Impact_cover.jpg',
   'Honkai: Star Rail': 'https://upload.wikimedia.org/wikipedia/en/2/29/Honkai_Star_Rail_cover.jpg',
   'Zenless Zone Zero': 'https://upload.wikimedia.org/wikipedia/en/b/b7/Zenless_Zone_Zero_cover_art.jpg',
   'Wuthering Waves': 'https://upload.wikimedia.org/wikipedia/en/1/12/Wuthering_Waves_cover_art.png',
   'Star Citizen': 'https://upload.wikimedia.org/wikipedia/en/f/f2/Star_Citizen_logo.png',
-  'StarCraft II': 'https://upload.wikimedia.org/wikipedia/en/2/20/StarCraft_II_-_Box_Art.jpg',
   'StarCraft II: Wings of Liberty': 'https://upload.wikimedia.org/wikipedia/en/2/20/StarCraft_II_-_Box_Art.jpg',
+  'StarCraft Remastered': 'https://upload.wikimedia.org/wikipedia/en/9/93/StarCraft_box_art.jpg',
   'Heroes of the Storm': 'https://upload.wikimedia.org/wikipedia/en/5/56/Heroes_of_the_Storm_logo.png',
   'Hearthstone': 'https://upload.wikimedia.org/wikipedia/en/8/8c/Hearthstone_logo.png',
+  'Gran Turismo 7 alt': '/covers/gran-turismo-7.jpg',
+  'Warcraft III: Reforged': 'https://upload.wikimedia.org/wikipedia/en/b/b4/Warcraft_III_Reforged_cover.jpg',
+  'Warcraft III: The Frozen Throne': 'https://upload.wikimedia.org/wikipedia/en/5/55/WarcraftIII-FrozenThrone-cover.jpg',
+  'Command & Conquer: Generals': 'https://upload.wikimedia.org/wikipedia/en/d/d4/C%26C_Generals_cover.jpg',
+  'Empire Earth': 'https://upload.wikimedia.org/wikipedia/en/c/c8/Empire_Earth_box.jpg',
+  'Empire Earth II': 'https://upload.wikimedia.org/wikipedia/en/5/50/Empire_Earth_II.jpg',
+  'Empire Earth III': 'https://upload.wikimedia.org/wikipedia/en/c/c5/Empire_Earth_III.jpg',
+  'Rise of Legends': 'https://upload.wikimedia.org/wikipedia/en/7/73/Rise_of_Legends.jpg',
+  'SimCity (2013)': 'https://upload.wikimedia.org/wikipedia/en/d/d6/SimCity_2013_Limited_Edition_cover.png',
+  'World of Tanks': 'https://upload.wikimedia.org/wikipedia/en/7/74/World_of_Tanks_PC_cover.jpg',
+  'World of Warships': 'https://upload.wikimedia.org/wikipedia/en/c/cc/World_of_Warships_logo.jpg',
+  'Blue Protocol': 'https://upload.wikimedia.org/wikipedia/en/7/75/Blue_Protocol_logo.png',
+  
+  // Sports not on Steam
+  'NHL 24': 'https://upload.wikimedia.org/wikipedia/en/7/70/NHL_24_Cover.jpg',
+  'NHL 23': 'https://upload.wikimedia.org/wikipedia/en/7/70/NHL_24_Cover.jpg',
+  'NHL 22': 'https://upload.wikimedia.org/wikipedia/en/7/70/NHL_24_Cover.jpg',
+  'Madden NFL 22': 'https://upload.wikimedia.org/wikipedia/en/4/41/Madden_NFL_22_cover_art.jpg',
+  'Madden NFL 21': 'https://upload.wikimedia.org/wikipedia/en/4/41/Madden_NFL_22_cover_art.jpg',
+  'Madden NFL 20': 'https://upload.wikimedia.org/wikipedia/en/4/41/Madden_NFL_22_cover_art.jpg',
+  'UFC 5': 'https://upload.wikimedia.org/wikipedia/en/a/a3/EA_Sports_UFC_5_cover_art.jpg',
+  'UFC 4': 'https://upload.wikimedia.org/wikipedia/en/8/87/EA_Sports_UFC_4_cover_art.jpg',
+  'UFC 3': 'https://upload.wikimedia.org/wikipedia/en/c/c5/EA_Sports_UFC_3_cover_art.jpg',
+  'Fight Night Champion': 'https://upload.wikimedia.org/wikipedia/en/d/d1/Fight_Night_Champion_Cover.jpg',
+  'EA Sports UFC 2': 'https://upload.wikimedia.org/wikipedia/en/6/65/EA_Sports_UFC_2_cover_art.jpg',
+  'Pro Evolution Soccer 2020': 'https://upload.wikimedia.org/wikipedia/en/3/37/EFootball_PES_2020_cover_art.jpg',
+  'Pro Evolution Soccer 2019': 'https://upload.wikimedia.org/wikipedia/en/3/37/EFootball_PES_2020_cover_art.jpg',
+
+  // VR-only / Oculus exclusives
+  "Asgard's Wrath": 'https://upload.wikimedia.org/wikipedia/en/e/e2/Asgard%27s_Wrath_cover_art.jpg',
+  "Asgard's Wrath 2": 'https://upload.wikimedia.org/wikipedia/en/e/e2/Asgard%27s_Wrath_cover_art.jpg',
+
+  // Obscure Warhammer games - use Warhammer 40K brand image
+  'Warhammer Online': 'https://upload.wikimedia.org/wikipedia/en/a/ac/Warhammer_Online_Age_of_Reckoning_box_art.jpg',
+  'Fire Warrior': 'https://upload.wikimedia.org/wikipedia/en/3/35/Warhammer_40000_Fire_Warrior.jpg',
+  'Mark of Chaos': 'https://upload.wikimedia.org/wikipedia/en/f/fb/Mark_of_Chaos_cover.jpg',
+  'Dark Heresy': 'https://upload.wikimedia.org/wikipedia/en/e/ef/Dark_Heresy_RPG_Cover.jpg',
+};
+
+// Epic Games Store URLs for non-Steam games
+const EPIC_STORE_URLS: Record<string, string> = {
+  'Fortnite': 'https://store.epicgames.com/p/fortnite',
+  'Alan Wake 2': 'https://store.epicgames.com/p/alan-wake-2',
+  'Dead Island 2': 'https://store.epicgames.com/p/dead-island-2',
+  'Anno 1800': 'https://store.epicgames.com/p/anno-1800',
+  'Kingdom Hearts III': 'https://store.epicgames.com/p/kingdom-hearts-iii',
 };
 
 export function getSteamAppId(gameName: string): number | null {
-  // Direct lookup
   if (STEAM_APP_IDS[gameName] !== undefined) {
     return STEAM_APP_IDS[gameName] || null;
   }
-  // Fuzzy match: check if any key is contained in the game name or vice versa
   const lowerName = gameName.toLowerCase();
   for (const [key, id] of Object.entries(STEAM_APP_IDS)) {
     if (id && lowerName.includes(key.toLowerCase())) return id;
@@ -932,7 +1155,6 @@ export function getSteamAppId(gameName: string): number | null {
 
 export function getNonSteamCover(gameName: string): string | null {
   if (NON_STEAM_COVERS[gameName]) return NON_STEAM_COVERS[gameName];
-  // Fuzzy match: normalize by removing punctuation
   const normalize = (s: string) => s.toLowerCase().replace(/[^a-z0-9 ]/g, '').trim();
   const normalizedName = normalize(gameName);
   for (const [key, url] of Object.entries(NON_STEAM_COVERS)) {
@@ -945,7 +1167,6 @@ export function getNonSteamCover(gameName: string): string | null {
 export function getSteamImageUrl(gameName: string): string | null {
   const appId = getSteamAppId(gameName);
   if (appId) return `https://cdn.akamai.steamstatic.com/steam/apps/${appId}/library_600x900_2x.jpg`;
-  // Try non-Steam cover
   return getNonSteamCover(gameName);
 }
 
@@ -957,6 +1178,24 @@ export function getSteamHeaderUrl(gameName: string): string | null {
 
 export function getSteamStoreUrl(gameName: string): string | null {
   const appId = getSteamAppId(gameName);
-  if (!appId) return null;
-  return `https://store.steampowered.com/app/${appId}`;
+  if (appId) return `https://store.steampowered.com/app/${appId}`;
+  return null;
+}
+
+/**
+ * Get the best store URL for any game (Steam, Epic, or search fallback)
+ * Returns { url, platform } or null
+ */
+export function getStoreLink(gameName: string): { url: string; platform: 'steam' | 'epic' | 'search' } {
+  // Try Steam first
+  const steamUrl = getSteamStoreUrl(gameName);
+  if (steamUrl) return { url: steamUrl, platform: 'steam' };
+
+  // Try Epic
+  const epicUrl = EPIC_STORE_URLS[gameName];
+  if (epicUrl) return { url: epicUrl, platform: 'epic' };
+
+  // Fallback: Steam search
+  const query = encodeURIComponent(gameName);
+  return { url: `https://store.steampowered.com/search/?term=${query}`, platform: 'search' };
 }
