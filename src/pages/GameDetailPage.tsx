@@ -7,7 +7,7 @@ import { useGames, useUserSpecs, useFavorites } from '@/hooks/useGames';
 import { getGameById } from '@/data/gameParser';
 import { evaluatePerformance, getPerformanceBgClass } from '@/data/performanceLogic';
 import { PerformanceChart } from '@/components/PerformanceChart';
-import { getGameCover, getGenreCover } from '@/lib/genreCovers';
+import { getGameCover, getGenreCover, getGameCoverFallbacks } from '@/lib/genreCovers';
 import { getSteamHeaderUrl, getSteamStoreUrl } from '@/lib/steamAppIds';
 import type { UserSpecs, Game } from '@/types/game';
 
