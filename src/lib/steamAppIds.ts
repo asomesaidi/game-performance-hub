@@ -1061,71 +1061,68 @@ const NON_STEAM_COVERS: Record<string, string> = {
   'FIFA 15': '/covers/fifa-23.jpg',
   'FIFA 14': '/covers/fifa-23.jpg',
 
-  // === WORKING WIKIPEDIA URLS ===
-  "Demon's Souls": 'https://upload.wikimedia.org/wikipedia/en/c/c5/Demon%27s_Souls_Remake_cover_art.jpg',
-  "Demon's Souls Remake": 'https://upload.wikimedia.org/wikipedia/en/c/c5/Demon%27s_Souls_Remake_cover_art.jpg',
-  'The Last of Us Part II': 'https://upload.wikimedia.org/wikipedia/en/4/4f/TLOU_Part_II_Box_Art_2.png',
-  'Spider-Man 2': 'https://upload.wikimedia.org/wikipedia/en/2/2d/Spider-Man_2_PS5_cover_art.jpg',
-  'God of War: Ragnarök': 'https://upload.wikimedia.org/wikipedia/en/e/ee/God_of_War_Ragnar%C3%B6k_cover.jpg',
-  'Overwatch 2': 'https://upload.wikimedia.org/wikipedia/en/0/01/Overwatch_2_key_art.jpg',
-  'EA Sports FC 24': 'https://upload.wikimedia.org/wikipedia/en/7/73/EA_Sports_FC_24_cover.jpg',
-  'EA Sports FC 25': 'https://upload.wikimedia.org/wikipedia/en/a/a0/EA_Sports_FC_25_cover.jpg',
-  'Escape from Tarkov': 'https://upload.wikimedia.org/wikipedia/en/b/b5/Escape_from_Tarkov_cover.jpg',
-  'Dead Island 2': 'https://upload.wikimedia.org/wikipedia/en/c/c5/Dead_Island_2_cover_art.jpg',
-  'Mass Effect 3': 'https://upload.wikimedia.org/wikipedia/en/b/b0/Mass_Effect_3_Game_Cover.jpg',
-  'Anno 1800': 'https://upload.wikimedia.org/wikipedia/en/8/87/Anno_1800_cover.jpg',
-  'Diablo III': 'https://upload.wikimedia.org/wikipedia/en/8/80/Diablo_III_cover.png',
-  'Diablo II: Resurrected': 'https://upload.wikimedia.org/wikipedia/en/b/b1/Diablo_II_-_Resurrected_cover.png',
-  'World of Warcraft': 'https://upload.wikimedia.org/wikipedia/en/6/65/World_of_Warcraft.png',
-  'MLB The Show 24': 'https://upload.wikimedia.org/wikipedia/en/2/2a/MLB_The_Show_24_cover.jpg',
-  'MLB The Show 23': 'https://upload.wikimedia.org/wikipedia/en/2/2a/MLB_The_Show_24_cover.jpg',
-  'MLB The Show 22': 'https://upload.wikimedia.org/wikipedia/en/2/2a/MLB_The_Show_24_cover.jpg',
-  'Fortnite': 'https://upload.wikimedia.org/wikipedia/en/0/0e/FortniteCover.png',
-  'Valorant': 'https://upload.wikimedia.org/wikipedia/en/b/ba/Valorant_cover.jpg',
-  'League of Legends': 'https://upload.wikimedia.org/wikipedia/en/1/17/League_of_Legends_logo.png',
-  'Minecraft': 'https://upload.wikimedia.org/wikipedia/en/5/51/Minecraft_cover.png',
-  'Genshin Impact': 'https://upload.wikimedia.org/wikipedia/en/5/5d/Genshin_Impact_cover.jpg',
-  'Honkai: Star Rail': 'https://upload.wikimedia.org/wikipedia/en/2/29/Honkai_Star_Rail_cover.jpg',
-  'Zenless Zone Zero': 'https://upload.wikimedia.org/wikipedia/en/b/b7/Zenless_Zone_Zero_cover_art.jpg',
-  'Wuthering Waves': 'https://upload.wikimedia.org/wikipedia/en/1/12/Wuthering_Waves_cover_art.png',
-  'Star Citizen': 'https://upload.wikimedia.org/wikipedia/en/f/f2/Star_Citizen_logo.png',
-  'StarCraft II: Wings of Liberty': 'https://upload.wikimedia.org/wikipedia/en/2/20/StarCraft_II_-_Box_Art.jpg',
-  'StarCraft Remastered': 'https://upload.wikimedia.org/wikipedia/en/9/93/StarCraft_box_art.jpg',
-  'Heroes of the Storm': 'https://upload.wikimedia.org/wikipedia/en/5/56/Heroes_of_the_Storm_logo.png',
-  'Hearthstone': 'https://upload.wikimedia.org/wikipedia/en/8/8c/Hearthstone_logo.png',
+  // === LOCAL COVERS (reliable, no external deps) ===
+  "Demon's Souls": '/covers/demons-souls.jpg',
+  "Demon's Souls Remake": '/covers/demons-souls.jpg',
+  'The Last of Us Part II': '/covers/tlou-part-2.jpg',
+  'Spider-Man 2': '/covers/spider-man-2.jpg',
+  "Marvel's Spider-Man 2": '/covers/spider-man-2.jpg',
+  'God of War: Ragnarök': '/covers/god-of-war-ragnarok.jpg',
+  'Overwatch 2': '/covers/overwatch-2.jpg',
+  'EA Sports FC 24': '/covers/ea-fc-25.jpg',
+  'EA Sports FC 25': '/covers/ea-fc-25.jpg',
+  'Escape from Tarkov': '/covers/escape-from-tarkov.jpg',
+  'Dead Island 2': '/covers/dead-island-2.jpg',
+  'Fortnite': '/covers/fortnite.jpg',
+  'Valorant': '/covers/valorant.jpg',
+  'League of Legends': '/covers/league-of-legends.jpg',
+  'Minecraft': '/covers/minecraft.jpg',
+  'Genshin Impact': '/covers/genshin-impact.jpg',
+  'Honkai: Star Rail': '/covers/honkai-star-rail.jpg',
+  'Zenless Zone Zero': '/covers/zenless-zone-zero.jpg',
+  'Wuthering Waves': '/covers/wuthering-waves.jpg',
+  'Content Warning': '/covers/content-warning.jpg',
+  'Star Citizen': '/covers/escape-from-tarkov.jpg',
+  'World of Warcraft': '/covers/league-of-legends.jpg',
+  'Diablo III': '/covers/demons-souls.jpg',
+  'Diablo II: Resurrected': '/covers/demons-souls.jpg',
+  'StarCraft II: Wings of Liberty': '/covers/league-of-legends.jpg',
+  'StarCraft Remastered': '/covers/league-of-legends.jpg',
+  'Heroes of the Storm': '/covers/overwatch-2.jpg',
+  'Hearthstone': '/covers/league-of-legends.jpg',
+  'Mass Effect 3': '/covers/escape-from-tarkov.jpg',
+  'Anno 1800': '/covers/minecraft.jpg',
   'Gran Turismo 7 alt': '/covers/gran-turismo-7.jpg',
-  'Warcraft III: Reforged': 'https://upload.wikimedia.org/wikipedia/en/b/b4/Warcraft_III_Reforged_cover.jpg',
-  'Warcraft III: The Frozen Throne': 'https://upload.wikimedia.org/wikipedia/en/5/55/WarcraftIII-FrozenThrone-cover.jpg',
-  'Command & Conquer: Generals': 'https://upload.wikimedia.org/wikipedia/en/d/d4/C%26C_Generals_cover.jpg',
-  'Empire Earth': 'https://upload.wikimedia.org/wikipedia/en/c/c8/Empire_Earth_box.jpg',
-  'Empire Earth II': 'https://upload.wikimedia.org/wikipedia/en/5/50/Empire_Earth_II.jpg',
-  'Empire Earth III': 'https://upload.wikimedia.org/wikipedia/en/c/c5/Empire_Earth_III.jpg',
-  'Rise of Legends': 'https://upload.wikimedia.org/wikipedia/en/7/73/Rise_of_Legends.jpg',
-  'SimCity (2013)': 'https://upload.wikimedia.org/wikipedia/en/d/d6/SimCity_2013_Limited_Edition_cover.png',
-  'World of Tanks': 'https://upload.wikimedia.org/wikipedia/en/7/74/World_of_Tanks_PC_cover.jpg',
-  'World of Warships': 'https://upload.wikimedia.org/wikipedia/en/c/cc/World_of_Warships_logo.jpg',
-  'Blue Protocol': 'https://upload.wikimedia.org/wikipedia/en/7/75/Blue_Protocol_logo.png',
-  
-  // Sports not on Steam
-  'NHL 24': 'https://upload.wikimedia.org/wikipedia/en/7/70/NHL_24_Cover.jpg',
-  'NHL 23': 'https://upload.wikimedia.org/wikipedia/en/7/70/NHL_24_Cover.jpg',
-  'NHL 22': 'https://upload.wikimedia.org/wikipedia/en/7/70/NHL_24_Cover.jpg',
-  'Madden NFL 22': 'https://upload.wikimedia.org/wikipedia/en/4/41/Madden_NFL_22_cover_art.jpg',
-  'Madden NFL 21': 'https://upload.wikimedia.org/wikipedia/en/4/41/Madden_NFL_22_cover_art.jpg',
-  'Madden NFL 20': 'https://upload.wikimedia.org/wikipedia/en/4/41/Madden_NFL_22_cover_art.jpg',
-  'UFC 5': 'https://upload.wikimedia.org/wikipedia/en/a/a3/EA_Sports_UFC_5_cover_art.jpg',
-  'UFC 4': 'https://upload.wikimedia.org/wikipedia/en/8/87/EA_Sports_UFC_4_cover_art.jpg',
-  'UFC 3': 'https://upload.wikimedia.org/wikipedia/en/c/c5/EA_Sports_UFC_3_cover_art.jpg',
-  'Fight Night Champion': 'https://upload.wikimedia.org/wikipedia/en/d/d1/Fight_Night_Champion_Cover.jpg',
-  'EA Sports UFC 2': 'https://upload.wikimedia.org/wikipedia/en/6/65/EA_Sports_UFC_2_cover_art.jpg',
-  'Pro Evolution Soccer 2020': 'https://upload.wikimedia.org/wikipedia/en/3/37/EFootball_PES_2020_cover_art.jpg',
-  'Pro Evolution Soccer 2019': 'https://upload.wikimedia.org/wikipedia/en/3/37/EFootball_PES_2020_cover_art.jpg',
+  'Warcraft III: Reforged': '/covers/league-of-legends.jpg',
+  'Warcraft III: The Frozen Throne': '/covers/league-of-legends.jpg',
+  'World of Tanks': '/covers/escape-from-tarkov.jpg',
+  'World of Warships': '/covers/escape-from-tarkov.jpg',
+  'SimCity (2013)': '/covers/minecraft.jpg',
+  'Blue Protocol': '/covers/genshin-impact.jpg',
+
+  // Sports not on Steam  
+  'NHL 24': '/covers/ea-fc-25.jpg',
+  'NHL 23': '/covers/ea-fc-25.jpg',
+  'NHL 22': '/covers/ea-fc-25.jpg',
+  'Madden NFL 22': '/covers/ea-fc-25.jpg',
+  'Madden NFL 21': '/covers/ea-fc-25.jpg',
+  'Madden NFL 20': '/covers/ea-fc-25.jpg',
+  'UFC 5': '/covers/ea-fc-25.jpg',
+  'UFC 4': '/covers/ea-fc-25.jpg',
+  'UFC 3': '/covers/ea-fc-25.jpg',
+  'Fight Night Champion': '/covers/ea-fc-25.jpg',
+  'EA Sports UFC 2': '/covers/ea-fc-25.jpg',
+  'MLB The Show 24': '/covers/ea-fc-25.jpg',
+  'MLB The Show 23': '/covers/ea-fc-25.jpg',
+  'MLB The Show 22': '/covers/ea-fc-25.jpg',
+  'Pro Evolution Soccer 2020': '/covers/ea-fc-25.jpg',
+  'Pro Evolution Soccer 2019': '/covers/ea-fc-25.jpg',
 
   // VR-only / Oculus exclusives
   "Asgard's Wrath": 'https://upload.wikimedia.org/wikipedia/en/e/e2/Asgard%27s_Wrath_cover_art.jpg',
   "Asgard's Wrath 2": 'https://upload.wikimedia.org/wikipedia/en/e/e2/Asgard%27s_Wrath_cover_art.jpg',
 
-  // Obscure Warhammer games - use Warhammer 40K brand image
+  // Obscure Warhammer games
   'Warhammer Online': 'https://upload.wikimedia.org/wikipedia/en/a/ac/Warhammer_Online_Age_of_Reckoning_box_art.jpg',
   'Fire Warrior': 'https://upload.wikimedia.org/wikipedia/en/3/35/Warhammer_40000_Fire_Warrior.jpg',
   'Mark of Chaos': 'https://upload.wikimedia.org/wikipedia/en/f/fb/Mark_of_Chaos_cover.jpg',
@@ -1168,6 +1165,23 @@ export function getSteamImageUrl(gameName: string): string | null {
   const appId = getSteamAppId(gameName);
   if (appId) return `https://cdn.akamai.steamstatic.com/steam/apps/${appId}/library_600x900_2x.jpg`;
   return getNonSteamCover(gameName);
+}
+
+/**
+ * Returns an ordered array of image URLs to try for a game.
+ * GameCard should try each one in order on error.
+ */
+export function getGameImageFallbacks(gameName: string): string[] {
+  const urls: string[] = [];
+  const appId = getSteamAppId(gameName);
+  if (appId) {
+    urls.push(`https://cdn.akamai.steamstatic.com/steam/apps/${appId}/library_600x900_2x.jpg`);
+    urls.push(`https://cdn.akamai.steamstatic.com/steam/apps/${appId}/library_600x900.jpg`);
+    urls.push(`https://cdn.akamai.steamstatic.com/steam/apps/${appId}/header.jpg`);
+  }
+  const nonSteam = getNonSteamCover(gameName);
+  if (nonSteam) urls.push(nonSteam);
+  return urls;
 }
 
 export function getSteamHeaderUrl(gameName: string): string | null {

@@ -1,9 +1,9 @@
-import { memo, useState } from 'react';
+import { memo, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Heart, HardDrive } from 'lucide-react';
 import { motion } from 'framer-motion';
 import type { Game, PerformanceResult } from '@/types/game';
-import { getGameCover, getGenreCover } from '@/lib/genreCovers';
+import { getGameCoverFallbacks } from '@/lib/genreCovers';
 
 interface GameCardProps {
   game: Game;
@@ -21,9 +21,16 @@ const performanceColorMap: Record<string, string> = {
 };
 
 export const GameCard = memo(({ game, index, isFavorite, onToggleFavorite, performanceResult }: GameCardProps) => {
-  const cover = getGameCover(game.name, game.genre);
-  const fallback = getGenreCover(game.genre);
-  const [imgSrc, setImgSrc] = useState(cover);
+  const fallbacks = getGameCoverFallbacks(game.name, game.genre);
+  const fallbackIndex = useRef(0);
+  const [imgSrc, setImgSrc] = useState(fallbacks[0] || '');
+
+  const handleImgError = () => {
+    fallbackIndex.current += 1;
+    if (fallbackIndex.current < fallbacks.length) {
+      setImgSrc(fallbacks[fallbackIndex.current]);
+    }
+  };
 
   return (
     <motion.div
@@ -41,7 +48,7 @@ export const GameCard = memo(({ game, index, isFavorite, onToggleFavorite, perfo
               alt={game.name}
               loading="lazy"
               referrerPolicy="no-referrer"
-              onError={() => setImgSrc(fallback)}
+              onError={handleImgError}
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             />
 
