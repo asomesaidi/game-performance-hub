@@ -1,9 +1,10 @@
 import { memo, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, HardDrive } from 'lucide-react';
+import { Heart, HardDrive, ExternalLink } from 'lucide-react';
 import { motion } from 'framer-motion';
 import type { Game, PerformanceResult } from '@/types/game';
 import { getGameCoverFallbacks } from '@/lib/genreCovers';
+import { getStoreLink } from '@/lib/steamAppIds';
 
 interface GameCardProps {
   game: Game;
@@ -24,6 +25,7 @@ export const GameCard = memo(({ game, index, isFavorite, onToggleFavorite, perfo
   const fallbacks = getGameCoverFallbacks(game.name, game.genre);
   const fallbackIndex = useRef(0);
   const [imgSrc, setImgSrc] = useState(fallbacks[0] || '');
+  const storeLink = getStoreLink(game.name);
 
   const handleImgError = () => {
     fallbackIndex.current += 1;
@@ -31,6 +33,8 @@ export const GameCard = memo(({ game, index, isFavorite, onToggleFavorite, perfo
       setImgSrc(fallbacks[fallbackIndex.current]);
     }
   };
+
+  const platformLabel = storeLink.platform === 'epic' ? 'Epic Games' : 'Steam';
 
   return (
     <motion.div
@@ -100,6 +104,18 @@ export const GameCard = memo(({ game, index, isFavorite, onToggleFavorite, perfo
           </div>
         </div>
       </Link>
+
+      {/* Store link */}
+      <a
+        href={storeLink.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={(e) => e.stopPropagation()}
+        className="flex items-center gap-1.5 px-3 py-1.5 mt-1 rounded-md text-[10px] font-medium text-muted-foreground hover:text-primary hover:bg-muted/50 transition-colors w-fit"
+      >
+        <ExternalLink className="w-3 h-3" />
+        <span>عرض على {platformLabel}</span>
+      </a>
     </motion.div>
   );
 });
